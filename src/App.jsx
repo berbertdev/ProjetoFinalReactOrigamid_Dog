@@ -5,7 +5,9 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Login from './Components/Login/Login';
+import User from './Components/User/User';
 import { UserStorage } from './UserContext.jsx';
+import ProtectedRoute from './Components/Helper/ProtectedRoute';
 
 const App = () => {
   return (
@@ -15,7 +17,15 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/login/*" element={<Login />}></Route>
+            <Route path="login/*" element={<Login />}></Route>
+            <Route
+              path="/conta/*"
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            ></Route>
           </Routes>
           <Footer />
         </UserStorage>
