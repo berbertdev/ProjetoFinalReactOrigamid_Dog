@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@svgx/vite-plugin-react": "^1.0.1",
     "react": "^18.2.0",
     "react-components": "^0.5.1",
     "react-dom": "^18.2.0",
@@ -17,6 +18,7 @@
     "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
